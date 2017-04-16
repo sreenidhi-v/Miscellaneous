@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+int main() {
+
+	int i;
+	vector<int> scnt(26,0),bcnt(26,0);
+    string str,sub;
+    cin>>sub>>str;
+    for(i=0;str[i]!='\0';i++)
+    {
+    	scnt[str[i]-97]++;
+    }
+    for(i=0;sub[i]!='\0';i++)
+    {
+    	bcnt[sub[i]-97]++;
+    }
+    for(i=0;i<26;i++)
+    {
+    		if(scnt[i]<bcnt[i]){ printf("No"); return 0; }
+    }
+    printf("Yes");
+	return 0;
+}
+
+/*
+The question was to ch­eck if the substring of one given string is an anagram of the other.
+
+Input: zamo amazon
+Output: Yes 
+*/

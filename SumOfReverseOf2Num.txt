@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+
+    long a,b;
+    cin>>a>>b;
+    long reva=0,revb=0;
+    while(a!=0)
+    {
+    	reva=reva*10+(a%10);
+    	a/=10;
+    }
+    while(b!=0)
+    {
+    	revb=revb*10+(b%10);
+    	b/=10;
+    }
+    cout<<reva+revb;
+	return 0;
+}
+
+/*
+2. given two numbers.
+reverse 2 numbers.
+add those two reversed numbers.
+
+Input : 31000
+2500
+
+Output : 65
+*/

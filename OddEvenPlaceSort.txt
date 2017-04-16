@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+
+	int i,j,n,t,u;
+	cin>>n;
+	vector<int> a;
+	vector<int> b;
+
+	for(i=0,j=0,t=1;t<=n;t++)
+	{
+		if(t%2==1){ scanf("%d",&u); a.push_back(u); i++; }
+		else { scanf("%d",&u); b.push_back(u); j++; }
+	}
+	sort(a.begin(),a.end());
+	sort(b.begin(),b.end());
+	for(t=i-1;t>=0;t--)
+	printf("%d ",a[t]);
+	for(t=0;t<j;t++)
+	printf("%d ",b[t]);
+	return 0;
+}
+
+
+/*
+1. given an array {5,3,6,2,7,1,4}. sort the odd position elements into descending order and even position elements into ascending order.
+
+O/P : { 7,6,5,4,1,2,3} 
+*/
